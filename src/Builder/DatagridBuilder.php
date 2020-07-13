@@ -174,7 +174,7 @@ class DatagridBuilder implements DatagridBuilderInterface
         $datagrid->addFilter($filter);
     }
 
-    public function getBaseDatagrid(AdminInterface $admin, array $values = [])
+    public function getBaseDatagrid(AdminInterface $admin, array $values = []): Datagrid
     {
         $pager = $this->getPager($admin->getPagerType());
 
