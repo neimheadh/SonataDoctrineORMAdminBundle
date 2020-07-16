@@ -35,7 +35,7 @@ class FieldDescription extends BaseFieldDescription
         $this->fieldName = $associationMapping['fieldName'];
     }
 
-    public function getTargetEntity()
+    public function getTargetEntity(): ?string
     {
         if ($this->associationMapping) {
             return $this->associationMapping['targetEntity'];
@@ -66,7 +66,7 @@ class FieldDescription extends BaseFieldDescription
         $this->parentAssociationMappings = $parentAssociationMappings;
     }
 
-    public function isIdentifier()
+    public function isIdentifier(): bool
     {
         return isset($this->fieldMapping['id']) ? $this->fieldMapping['id'] : false;
     }
